@@ -16,7 +16,7 @@ function printNameInCapital(name){
 var sofia = {
     name: 'Sofia',
     last_name: 'Cortez',
-    age: '53'
+    age: 53
 }
 
 var sonia = {
@@ -26,8 +26,32 @@ var sonia = {
 }
 
 function printNameInMay(people){
-    var  name = people.name.toUpperCase()
-    console.log(name)
+    // var  name = people.name.toUpperCase()
+    // is this the same that 
+    var { name } = people
+    console.log( name.toUpperCase() )
+    // console.log(name)
 }
 printNameInMay(sofia)
 printNameInMay(sonia)
+
+
+function printNewName({ name }){
+    console.log(name.toUpperCase())
+}
+
+printNewName(sofia)
+printNewName(sonia)
+printNewName({ name:'pepitos' })
+
+function greetings(people){
+    var { name , age} = people
+    console.log(`Hello my name is ${name} and I am ${age} years old`)
+}
+
+greetings(sofia)
+greetings(sonia)
+
+function birthday(people){
+    people.age += 1
+}
