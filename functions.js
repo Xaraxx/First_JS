@@ -53,5 +53,9 @@ greetings(sofia)
 greetings(sonia)
 
 function birthday(people){
-    people.age += 1
+    return {
+        ...people,
+        age: people.age += 1
+    }
+    
 }
