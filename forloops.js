@@ -27,3 +27,22 @@ for (var i = 1; i <= 365; i++ ){
 }
 
 console.log(`At the end of the year, ${sonia.name} weights ${sonia.weight.toFixed(3)}kg`)
+
+console.log(`At the begining of the year, ${sonia.name} weights ${sonia.weight}kg`)
+
+const META = sonia.weight - 3
+const eatTooMuch = () => Math.random() < 0.3 
+const doSomeSport = () => Math.random() < 0.4 
+var days = 0
+
+while ( sonia.weight > META ) {
+    if (eatTooMuch()) {
+        upWeight(sonia)
+    } 
+    if (doSomeSport()){
+        downWeight(sonia)
+    }
+    days += 1
+}
+
+console.log(`Have passed ${days} days until ${sonia.name} lost 3kg.`)
