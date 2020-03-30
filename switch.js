@@ -19,7 +19,9 @@ switch (zodiacal_sign) {
     case 'cancer':
     case 'cáncer':
         console.log('Atravesará algunos momentos donde la intranquilidad podría arrebatarle muchos de los éxitos que le ha costado demasiado trabajo conseguir. Evite que suceda.')
-    break 
+        break
+    default:
+        console.log('Zodiacal sign not found.')
 }
 
 // if (zodiacal_sign === 'aries'){
