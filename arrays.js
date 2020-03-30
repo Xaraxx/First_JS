@@ -34,4 +34,26 @@ for (var i = 0; i < allPeople.lenght; i++) {
     console.log(`${people.name} is ${people.height} meters`);
 }
 
+const isTall = (allPeople) => {
+    return allPeople.height > 1.67
+}
 
+var tallPeople = allPeople.filter(isTall)
+
+console.log(tallPeople)
+
+// other way
+
+var isTall2 = ({height}) => {
+    return height > 1.67
+}
+
+var tallPeople = allPeople.filter(isTall2)
+
+// homework
+var isSmall = (allPeople) => {
+    return allPeople.height < 1.67
+}
+
+var smallPeople = allPeople.filter(isSmall)
+console.log(smallPeople)
