@@ -1,3 +1,4 @@
+
 function People(name, last_name){
     this.name = name
     this.last_name = last_name
@@ -13,6 +14,13 @@ var jorge = new People('Jorge', 'Galván')
 jorge.greetings()
 
 // homework
+
+function inheritsFrom(prototypeSon, prototypeFather){
+    var fn = function(){}
+    fn.prototype = prototypeFather.prototype
+    prototypeSon.prototype = new fn
+    prototypeSon.prototype.constructor = prototypeSon
+}
 
 function InfoPeople(name, last_name, height){
     this.name = name
@@ -31,20 +39,25 @@ InfoPeople.prototype.isTall = function(){
     }
 }    
 
-var maria = new InfoPeople('María', 'Castro', 1.80)
-var sergio = new InfoPeople('Sergio', 'Orozco', 1.76)
-var sofia = new InfoPeople('Sofia', 'Ortega', 1.86)
-var carlos = new InfoPeople('Carlos', 'Pontón', 1.65)
-maria.isTall()
-sergio.isTall()
-sofia.isTall()
-carlos.isTall()
-
-
-People.prototype.greetings = function (){
-    console.log(`Hi! my name is ${this.name} ${this.last_name}`)
+function Developer(name, last_name){
+    this.name = name
+    this.last_name = last_name
 }
 
-var jorge = new People('Jorge', 'Galván')
+inheritsFrom(Developer, InfoPeople)
 
-jorge.greetings()
+Developer.prototype.greetings = function () {
+    console.log(`Hello, my name is ${this.name} ${this.last_name} and I'm developer`)
+}
+
+maria.greetings()
+
+var sergio = new InfoPeople('Sergio', 'Orozco', 1.76)
+// var sofia = new InfoPeople('Sofia', 'Ortega', 1.86)
+// var carlos = new InfoPeople('Carlos', 'Pontón', 1.65)
+maria.isTall()
+sergio.isTall()
+// sofia.isTall()
+// carlos.isTall()
+
+
