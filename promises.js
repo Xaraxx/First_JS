@@ -4,10 +4,10 @@ const PEOPLE_URL = 'people/:id'
 
 function getCharacter(id, ){
     return new Promise(function(resolve, reject){
-        
+        const url =`${API_URL}${PEOPLE_URL.replace(':id', id)}`
     })
 
-    const url =`${API_URL}${PEOPLE_URL.replace(':id', id)}`
+    
     $.get(url, {crossDomain:true}, callback).fail(function(){
         console.log(`We have something wrong at this moment. Is impossible get the character ${id} `)
     })
