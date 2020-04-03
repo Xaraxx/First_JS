@@ -14,7 +14,37 @@ function getCharacter(id, ){
 
 getCharacter(1)
 
-.then(function(character){
+.then((character) => {
+    console.log(`Hello! I'm ${character.name}`)
+    return getCharacter(2)
+})
+
+.then((character) => {
+    console.log(`Hello! I'm ${character.name}`)
+    return getCharacter(3)
+})
+
+.then((character) => {
+    console.log(`Hello! I'm ${character.name}`)
+    return getCharacter(4)
+})
+
+.then((character) => {
+    console.log(`Hello! I'm ${character.name}`)
+    return getCharacter(5)
+})
+
+.then((character) => {
+    console.log(`Hello! I'm ${character.name}`)
+    return getCharacter(6)
+})
+
+.then((character) => {
+    console.log(`Hello! I'm ${character.name}`)
+    return getCharacter(7)
+})
+
+.then((character) => {
     console.log(`Hello! I'm ${character.name}`)
 })
 
