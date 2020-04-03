@@ -54,7 +54,7 @@ function onError(id){
     console.log(`We have something wrong at this moment. Is impossible get the character ${id} `)}
 
 
-
+// callbacks chained! :(
 // getCharacter(1, function(character){
 //     console.log(`Hello! I'm ${character.name}`) 
 // })
