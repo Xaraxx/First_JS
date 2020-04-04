@@ -1,6 +1,9 @@
 const API_URL = 'https://swapi.co/api/'
 const PEOPLE_URL = 'people/:id'
 
+const greetings = document.getElementById('greetings') 
+
+// .greetings
 
 function getCharacter(id, callback){
     const url =`${API_URL}${PEOPLE_URL.replace(':id', id)}`
