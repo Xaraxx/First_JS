@@ -64,3 +64,13 @@ const mexicanGreeting = manyGreetings('güey!')
 americanGreeting(jorge.name)
 colombianGreeting(jorge.name)
 mexicanGreeting(jorge.name)
+
+const hBirthday = people => {
+     return people.age++
+    }
+
+
+const inmutableHB = people => ({
+    ...people,
+    age : people.age + 1
+})
