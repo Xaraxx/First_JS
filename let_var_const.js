@@ -24,3 +24,11 @@ daysBetweenDates = (date1, date2) => {
 
 const today = new Date()
 const birthday = new Date(1990, 7, 12)
+
+function integerDivision(dividend, divisor){
+    if (dividend < divisor){ 
+        return 0
+    }
+    
+    return 1 + integerDivision(dividend - divisor, divisor)
+}
