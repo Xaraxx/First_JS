@@ -42,3 +42,12 @@ Existen al menos tres maneras de cambiar el contexto de una función.
  -   Usando el método `.bind`, enviamos la referencia a la función sin ejecutarla, pasando el contexto como parámetro.
  -   Usando el método `.call`, ejecutamos inmediatamente la función con el contexto indicado
  -  Usando el método `.apply`, es similar a .call pero los parámetros adicionales se pasan como un arreglo de valores
+
+
+ ## :dizzy_face: ¿Cuándo hace falta poner el punto y coma al final de la línea?
+
+El punto y coma es opcional en JavaScript, excepto en algunos casos:
+
+ - Cuando usamos varias instrucciones en una mísma línea
+ - Al comenzar la próxima línea con un array
+ - Al comenzar la próxima línea con un template string

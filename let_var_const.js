@@ -1,7 +1,15 @@
 var jorge = {
     name: 'Jorge',
+    last_name: 'Galvan',
     age: 11
 }
+
+var sergio = {
+    name: 'Sergio',
+    last_name: 'Orozco',
+    age: 28
+}
+
 
 function isOlder(people){
     if (people.age > 18){
@@ -74,3 +82,22 @@ const inmutableHB = people => ({
     ...people,
     age : people.age + 1
 })
+
+function saludar(){
+    console.log(`Hello! my name is ${this.name} ${this.last_name}`)
+}
+
+function saludar2(saludo = 'Hi!'){
+    console.log(`${saludo} my name is ${this.name} ${this.last_name}`)
+}
+
+
+// const saludarSergio = saludar.bind(sergio)
+// const saludarJorge = saludar.bind(jorge)
+
+// setTimeout(saludar2.bind(sergio, 'good morning'), 1000)
+// setTimeout(saludar2.bind(sergio), 1000)
+
+// saludar2.call(jorge, 'good night')
+
+saludar2.apply(sergio, ['Hola che'])
