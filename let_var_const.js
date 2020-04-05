@@ -50,3 +50,17 @@ function factorial(n){
     debugger   
     return this.cache[n]
 }
+
+function manyGreetings(endSentence){
+    return function(name){
+        console.log(` Hello ${name} ${endSentence}`)
+    }
+}
+
+const americanGreeting = manyGreetings('Bro!') 
+const colombianGreeting = manyGreetings('parce!') 
+const mexicanGreeting = manyGreetings('güey!') 
+
+americanGreeting(jorge.name)
+colombianGreeting(jorge.name)
+mexicanGreeting(jorge.name)
