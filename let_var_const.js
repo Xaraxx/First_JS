@@ -14,3 +14,13 @@ function isOlder(people){
 }
 
 isOlder(jorge)
+
+daysBetweenDates = (date1, date2) => {
+    const dayInMiliseconds = 1000 * 3600 * 24
+    const delta = Math.abs(date1 - date2)
+
+    return Math.floor(delta / dayInMiliseconds)
+}
+
+const today = new Date()
+const birthday = new Date(1990, 7, 12)
